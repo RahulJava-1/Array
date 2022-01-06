@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main(int argc, char const *argv[])
+{
+    int m,n;
+    int matrix[10][10],transpose[10][10];
+    printf("Enter rows and column: \n");
+    scanf("%d %d",&m,&n);
+    printf("Enter the element of matrix: \n");
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            scanf("%d",&matrix[i][j]);
+        }   
+    }
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            transpose[j][i] = matrix[i][j];
+        }
+    printf("\n");    
+    }
+    printf("Transpose of matrix : \n");
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            printf("%d \t",transpose[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
